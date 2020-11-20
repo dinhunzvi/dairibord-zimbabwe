@@ -3,9 +3,10 @@
     <string name="company_title">More than just milk</string>
 
     <!-- login screen strings -->
-    <string name="login_header_string">Sign</string>
+    <string name="sign_in_header_string">Sign in details</string>
     <string name="username_string">Username</string>
     <string name="password_string">Password</string>
+    <string name="sign_in_btn_string">Sign in</string>
 
     <!-- navigation menu strings -->
     <string name="nav_home_string">Home</string>
