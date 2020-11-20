@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Dairbord Zimbabwe</string>
+    <string name="app_name">Dairibord Zimbabwe</string>
+    <string name="company_title">More than just milk</string>
+
+    <!-- login screen strings -->
+    <string name="login_header_string">Sign</string>
+    <string name="username_string">Username</string>
+    <string name="password_string">Password</string>
+
+    <!-- navigation menu strings -->
+    <string name="nav_home_string">Home</string>
+    <string name="nav_sign_out_string">Sign out</string>
 </resources>

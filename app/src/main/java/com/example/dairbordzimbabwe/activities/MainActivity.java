@@ -1,10 +1,12 @@
 
 
-package com.example.dairbordzimbabwe;
+package com.example.dairbordzimbabwe.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.dairbordzimbabwe.R;
 
 public class MainActivity extends AppCompatActivity {
 
