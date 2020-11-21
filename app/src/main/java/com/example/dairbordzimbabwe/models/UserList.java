@@ -2,11 +2,11 @@ package com.example.dairbordzimbabwe.models;
 
 import java.util.List;
 
-public class UsersResponse {
+public class UserList {
 
     private List<User> users;
 
-    public UsersResponse(List<User> users) {
+    public UserList(List<User> users) {
         this.users = users;
     }
 

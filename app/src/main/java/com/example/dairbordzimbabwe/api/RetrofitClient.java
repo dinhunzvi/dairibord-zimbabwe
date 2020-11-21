@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
 
     private static final String BASE_URL = "http://192.168.1.13/dairibord/api/";
-    private Retrofit retrofit;
+    private final Retrofit retrofit;
     private static RetrofitClient m_instance;
 
     private RetrofitClient () {
