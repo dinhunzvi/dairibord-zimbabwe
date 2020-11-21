@@ -8,7 +8,27 @@
     <string name="password_string">Password</string>
     <string name="sign_in_btn_string">Sign in</string>
 
+    <!-- user screen strings -->
+    <string name="first_name_string">First name(s)</string>
+    <string name="last_name_string">Last name</string>
+    <string name="email_string">Email address</string>
+    <string name="users_header_string">User details</string>
+
+    <!-- save button string -->
+    <string name="save_button_string">Save</string>
+
     <!-- navigation menu strings -->
     <string name="nav_home_string">Home</string>
+    <string name="nav_suppliers_string">Suppliers</string>
+    <string name="nav_customers_string">Customers</string>
+    <string name="nav_deliveries_string">Deliveries</string>
+    <string name="nav_dispatches_string">Dispatches</string>
+    <string name="nav_products_string">Products</string>
+    <string name="nav_users_string">Users</string>
+    <string name="nav_change_password_string">Change password</string>
     <string name="nav_sign_out_string">Sign out</string>
+
+    <!-- navigation drawer strings -->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 </resources>

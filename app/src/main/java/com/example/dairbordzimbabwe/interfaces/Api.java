@@ -17,8 +17,7 @@ public interface Api {
             @Field( "email" ) String email,
             @Field( "username" ) String username,
             @Field( "first_name" ) String first_name,
-            @Field( "last_name" ) String last_name,
-            @Field( "password" ) String password
+            @Field( "last_name" ) String last_name
     );
 
     /* user login */

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home"
+            android:title="@string/nav_home_string" />
+
+        <item
+            android:id="@+id/nav_customers"
+            android:icon="@drawable/ic_baseline_group"
+            android:title="@string/nav_customers_string" />
+
+        <item
+            android:id="@+id/nav_suppliers"
+            android:icon="@drawable/ic_baseline_people"
+            android:title="@string/nav_suppliers_string" />
+
+        <item
+            android:id="@+id/nav_users"
+            android:icon="@drawable/ic_baseline_people_alt"
+            android:title="@string/nav_users_string" />
+
+        <item
+            android:id="@+id/nav_deliveries"
+            android:icon="@drawable/ic_baseline_folder_open"
+            android:title="@string/nav_deliveries_string" />
+
+        <item
+            android:id="@+id/nav_dispatches"
+            android:icon="@drawable/ic_baseline_folder"
+            android:title="@string/nav_dispatches_string" />
+
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_baseline_book"
+            android:title="@string/nav_products_string" />
+
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/ic_baseline_power_settings"
+            android:title="@string/nav_sign_out_string" />
+
+    </group>
+
+</menu>

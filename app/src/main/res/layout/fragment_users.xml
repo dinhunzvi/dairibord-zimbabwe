@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clUsersLayout"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/header_style"
+            android:text="@string/users_header_string" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/input_layout"
+            android:id="@+id/first_name_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtFirstName"
+                android:hint="@string/first_name_string"
+                app:placeholderTextColor="@color/black"
+                style="@style/name_style" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/input_layout"
+            android:id="@+id/last_name_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLastName"
+                android:hint="@string/last_name_string"
+                app:placeholderTextColor="@color/black"
+                style="@style/name_style" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/input_layout"
+            android:id="@+id/username_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUsername"
+                android:hint="@string/username_string"
+                app:placeholderTextColor="@color/black"
+                style="@style/name_style" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/input_layout"
+            android:id="@+id/email_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmail"
+                android:hint="@string/email_string"
+                app:placeholderTextColor="@color/black"
+                style="@style/name_style" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/primary_button"
+            android:id="@+id/btnSave"
+            android:text="@string/save_button_string" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rcvUsers" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
