@@ -5,10 +5,7 @@
     android:id="@+id/clUsersLayout"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <LinearLayout style="@style/primary_linear">
 
         <TextView
             style="@style/header_style"
@@ -67,10 +64,14 @@
             android:id="@+id/btnSave"
             android:text="@string/save_button_string" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rcvUsers" />
+        <ScrollView
+            style="@style/recycler_view">
+
+            <androidx.recyclerview.widget.RecyclerView
+                style="@style/recycler_view"
+                android:id="@+id/rcvUsers" />
+
+        </ScrollView>
 
     </LinearLayout>
 

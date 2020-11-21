@@ -15,9 +15,6 @@ import com.example.dairbordzimbabwe.R;
 
 public class Splash extends AppCompatActivity {
 
-    private TextView tvTitle;
-    private ImageView imgLogo;
-    private Animation bottom, top;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,14 +23,14 @@ public class Splash extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN );
 
-        tvTitle = findViewById( R.id.tvTitle );
-        imgLogo = findViewById( R.id.imgLogo );
+        TextView tvTitle = findViewById(R.id.tvTitle);
+        ImageView imgLogo = findViewById(R.id.imgLogo);
 
-        bottom = AnimationUtils.loadAnimation( this, R.anim.bottom );
-        top = AnimationUtils.loadAnimation( this, R.anim.top );
+        Animation bottom = AnimationUtils.loadAnimation(this, R.anim.bottom);
+        Animation top = AnimationUtils.loadAnimation(this, R.anim.top);
 
-        tvTitle.setAnimation( bottom );
-        imgLogo.setAnimation( top );
+        tvTitle.setAnimation(bottom);
+        imgLogo.setAnimation(top);
 
         int SPLASH_SCREEN = 5000;
         new Handler().postDelayed(new Runnable() {
