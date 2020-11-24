@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="15dp"
+    style="@style/card_view">
+
+    <LinearLayout
+        style="@style/card_view_linear">
+
+        <TextView
+            style="@style/card_view_name"
+            android:id="@+id/tvName" />
+
+        <LinearLayout
+            style="@style/card_view_h_linear">
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/card_view_text_view" />
+
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                style="@style/card_view_text_view" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

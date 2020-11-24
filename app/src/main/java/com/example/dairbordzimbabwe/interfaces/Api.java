@@ -3,6 +3,7 @@ package com.example.dairbordzimbabwe.interfaces;
 import com.example.dairbordzimbabwe.models.CustomerList;
 import com.example.dairbordzimbabwe.models.DefaultResponse;
 import com.example.dairbordzimbabwe.models.LoginResponse;
+import com.example.dairbordzimbabwe.models.ProductList;
 import com.example.dairbordzimbabwe.models.SupplierList;
 import com.example.dairbordzimbabwe.models.UserList;
 
@@ -100,4 +101,20 @@ public interface Api {
             @Field( "contact_person" ) String contact_person,
             @Field( "contact_mobile" ) String contact_mobile
     );
+
+    /* end points for products come here */
+
+    /* get all products */
+    @GET( "products" )
+    Call<ProductList> get_products();
+
+    /* add a new product */
+    @FormUrlEncoded
+    @POST( "product" )
+    Call<DefaultResponse> add_product (
+            @Field( "product_name" ) String product_name,
+            @Field( "quantity_in_stock" ) int stock_quantity,
+            @Field( "milk_required" ) int milk_required
+    );
+
 }

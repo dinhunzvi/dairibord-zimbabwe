@@ -26,6 +26,17 @@
     <string name="contact_person_string">Contact person</string>
     <string name="contact_number_string">Phone number</string>
 
+    <!-- deliveries screen strings -->
+    <string name="deliveries_header_string">Delivery details</string>
+    <string name="supplier_string">Supplier</string>
+    <string name="quantity_delivered_string">Quantity delivered</string>
+
+    <!-- products screen strings -->
+    <string name="products_header_string">Product details</string>
+    <string name="product_name_string">Product name</string>
+    <string name="stock_quantity_string">Quantity in stock</string>
+    <string name="milk_required_string">Milk required to make one unit</string>
+
     <!-- save button string -->
     <string name="save_button_string">Save</string>
 

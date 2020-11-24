@@ -4,14 +4,14 @@ import java.util.List;
 
 public class SupplierList {
 
-    private final List<Supplier> supplier;
+    private final List<Supplier> suppliers;
 
-    public SupplierList(List<Supplier> supplier) {
-        this.supplier = supplier;
+    public SupplierList(List<Supplier> suppliers) {
+        this.suppliers = suppliers;
     }
 
-    public List<Supplier> getSupplier() {
-        return supplier;
+    public List<Supplier> getSuppliers() {
+        return suppliers;
     }
 
 }

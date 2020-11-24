@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/products_coordinator"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        style="@style/primary_linear">
+
+        <TextView
+            style="@style/header_style"
+            android:text="@string/products_header_string" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/input_layout"
+            android:id="@+id/product_name_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/customer_name"
+                android:id="@+id/edtProductName"
+                android:hint="@string/product_name_string" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/input_layout"
+            android:id="@+id/stock_quantity_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/quantity_style"
+                android:hint="@string/stock_quantity_string"
+                android:id="@+id/edtStockQuantity" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/input_layout"
+            android:id="@+id/milk_required_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtMilkRequired"
+                android:hint="@string/milk_required_string"
+                style="@style/number_decimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/primary_button"
+            android:id="@+id/btnSave"
+            android:text="@string/save_button_string" />
+
+        <ScrollView
+            style="@style/scroll_view">
+
+            <androidx.recyclerview.widget.RecyclerView
+                style="@style/recycler_view"
+                android:id="@+id/rcvProducts" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/deliveries_coordinator">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        style="@style/primary_linear">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/header_style"
+            android:text="@string/deliveries_header_string" />
+
+        <LinearLayout style="@style/horizontal_layout">
+
+            <TextView
+                android:text="@string/supplier_string"
+                style="@style/label_style" />
+
+            <Spinner
+                android:id="@+id/spnSupplier"
+                style="@style/spinner_style" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/quantity_layout"
+            style="@style/input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtQuantity"
+                android:hint="@string/quantity_delivered_string"
+                style="@style/quantity_style" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/primary_button"
+            android:id="@+id/btnSave"
+            android:text="@string/save_button_string" />
+
+        <ScrollView
+            style="@style/scroll_view">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvDeliveries"
+                style="@style/recycler_view" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
