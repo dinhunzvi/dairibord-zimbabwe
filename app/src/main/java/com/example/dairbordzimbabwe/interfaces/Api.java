@@ -2,6 +2,7 @@ package com.example.dairbordzimbabwe.interfaces;
 
 import com.example.dairbordzimbabwe.models.CustomerList;
 import com.example.dairbordzimbabwe.models.DefaultResponse;
+import com.example.dairbordzimbabwe.models.DeliveryList;
 import com.example.dairbordzimbabwe.models.LoginResponse;
 import com.example.dairbordzimbabwe.models.ProductList;
 import com.example.dairbordzimbabwe.models.SupplierList;
@@ -114,7 +115,22 @@ public interface Api {
     Call<DefaultResponse> add_product (
             @Field( "product_name" ) String product_name,
             @Field( "quantity_in_stock" ) int stock_quantity,
-            @Field( "milk_required" ) int milk_required
+            @Field( "milk_required" ) double milk_required
+    );
+
+    /* end points for deliveries come here */
+
+    /* get all deliveries */
+    @GET( "deliveries" )
+    Call<DeliveryList> get_deliveries();
+
+    /* add a new delivery */
+    @FormUrlEncoded
+    @POST( "delivery" )
+    Call<DefaultResponse> add_delivery (
+            @Field( "supplier" ) int supplier_id,
+            @Field( "user" ) int user_id,
+            @Field( "quantity_delivered" ) int quantity_delivered
     );
 
 }

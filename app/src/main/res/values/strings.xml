@@ -35,7 +35,7 @@
     <string name="products_header_string">Product details</string>
     <string name="product_name_string">Product name</string>
     <string name="stock_quantity_string">Quantity in stock</string>
-    <string name="milk_required_string">Milk required to make one unit</string>
+    <string name="milk_required_string">Liters of milk required to make one unit</string>
 
     <!-- save button string -->
     <string name="save_button_string">Save</string>

@@ -5,9 +5,9 @@ public class Product {
     private final int product_id;
     private final String product_name;
     private final int quantity_in_stock;
-    private final int milk_required;
+    private final double milk_required;
 
-    public Product(int product_id, String product_name, int quantity_in_stock, int milk_required) {
+    public Product(int product_id, String product_name, int quantity_in_stock, double milk_required) {
         this.product_id = product_id;
         this.product_name = product_name;
         this.quantity_in_stock = quantity_in_stock;
@@ -26,8 +26,7 @@ public class Product {
         return quantity_in_stock;
     }
 
-    public int getMilk_required() {
+    public double getMilk_required() {
         return milk_required;
     }
-
 }

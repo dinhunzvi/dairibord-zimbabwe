@@ -16,8 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.dairbordzimbabwe.R;
 import com.example.dairbordzimbabwe.api.RetrofitClient;
+import com.example.dairbordzimbabwe.models.DefaultResponse;
 import com.example.dairbordzimbabwe.models.Supplier;
 import com.example.dairbordzimbabwe.models.SupplierList;
+import com.example.dairbordzimbabwe.storage.DairibordSharedPreferences;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -62,6 +64,15 @@ public class DeliveriesFragment extends Fragment {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        view.findViewById( R.id.btnSave ).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                add_delivery( view );
 
             }
         });
@@ -114,16 +125,52 @@ public class DeliveriesFragment extends Fragment {
         if ( edtQuantity.getText().toString().trim().isEmpty() ) {
             quantity_layout.setError( "Enter the quantity delivered by the supplier." );
             return false;
-        }
-        else if ( Integer.parseInt( edtQuantity.getText().toString().trim() ) > 0 ) {
-            quantity_layout.setError( null );
-            quantity_layout.setErrorEnabled( false );
-            return true;
         } else {
-            quantity_layout.setError( "Quantity delivered must be greater than 0." );
-            return false;
+            if ( Integer.parseInt( edtQuantity.getText().toString().trim() ) > 0 ) {
+                quantity_layout.setError( null );
+                quantity_layout.setErrorEnabled( false );
+                return true;
+            } else {
+                quantity_layout.setError( "Quantity delivered must be greater than 0." );
+                return false;
+            }
         }
 
+    }
+
+    public void add_delivery( View view ) {
+        if ( !validate_quantity() ) {
+            return;
+        }
+
+        int quantity = Integer.parseInt( edtQuantity.getText().toString().trim() );
+
+        int user = DairibordSharedPreferences.get_instance( getContext() ).get_user().getUser_id();
+
+        Call<DefaultResponse> add_delivery_call = RetrofitClient.get_instance().get_api()
+                .add_delivery( supplier_id, user, quantity );
+
+        add_delivery_call.enqueue(new Callback<DefaultResponse>() {
+            @Override
+            public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
+
+                DefaultResponse default_response = response.body();
+
+                Toast.makeText( getContext(), default_response.getMessage(),
+                        Toast.LENGTH_LONG ).show();
+
+                if ( default_response.isSuccess() ) {
+                    edtQuantity.setText( "" );
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<DefaultResponse> call, Throwable t) {
+                String error_message = "Could not connect to database: " + t.getMessage();
+                Toast.makeText( getContext(), error_message, Toast.LENGTH_LONG ).show();
+            }
+        });
     }
 
 }
